@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Head from "next/head";
 import { ThirdwebProvider, ConnectWallet } from "@thirdweb-dev/react";
 
@@ -10,13 +9,14 @@ export default function Home() {
       </Head>
 
       <main className="bg-[#0a0f20] text-white min-h-screen flex flex-col items-center justify-center space-y-12 p-4">
-        
         {/* Hero Section */}
         <section className="text-center">
-          <Image
+          <img
             src="/logo.png"
-            alt="Yogoo Logo"
-            className="w-32 h-32 mx-auto" // 이미지 크기 조정
+            alt="Yogoo logo"
+            width="120"
+            height="120"
+            className="mx-auto"
           />
           <p className="mt-6 text-xl tracking-widest text-gray-300">
             Soft paws. Digital claws.
@@ -25,10 +25,12 @@ export default function Home() {
 
         {/* Side Section */}
         <section className="text-center">
-          <Image
+          <img
             src="/sideimg.png"
             alt="Yogoo side image"
-            className="w-48 h-48 mx-auto rounded-xl" // 사이드 이미지 크기 및 스타일
+            width="200"
+            height="200"
+            className="mx-auto rounded-xl"
           />
           <p className="mt-4 text-sm text-gray-400">
             She doesn’t run. She orbits.
@@ -40,14 +42,13 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="py-4 bg-[#080d17] text-sm text-gray-500 w-full text-center">
-          <div>Made on Base ｜ brrrrism@gmail.com</div>
+          <div>Made on <span className="text-white">Base</span> | brrrrism@gmail.com</div>
           <div className="mt-1 text-xs text-gray-600">
             Contract: 0x5B97C45ab10f4a062b7229D3649A521e9C1a5e0F <br />
             Total Supply: 20,237,230,000 YOGOO
           </div>
-          <p className="mt-2">🐾 @yogoo_neko</p>
+          <div className="mt-1">🐾 @yogoo_neko</div>
         </footer>
-        
       </main>
     </ThirdwebProvider>
   );
