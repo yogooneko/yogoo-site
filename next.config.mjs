@@ -2,13 +2,13 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ... 다른 설정 옵션들 (이미 있다면 그대로 둡니다)
-
-  experimental: { // <-- experimental 속성 추가
-    appDir: true, // <-- appDir 옵션 추가
+  experimental: {
+    appDir: true,
   },
 
-  // ... 다른 설정 옵션들
+  images: {
+    unoptimized: true, // ← 이것만 추가하면 돼!
+  },
 };
 
 export default nextConfig;
